@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,minium-scale=1.0">
+    <title>Control Acceso MDY PR</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script> -->
+
+		<script src="http://158.69.241.104:90/Acceso/content/js/jquery.min.js"></script>
+		<script src="http://158.69.241.104:90/Acceso/content/js/skel.min.js"></script>
+		<script src="http://158.69.241.104:90/Acceso/content/js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="style_index/skel.css" />
+			<link rel="stylesheet" href="style_index/style.css" />
+			<link rel="stylesheet" href="style_index/style-desktop.css" />
+			<link rel="stylesheet" href="style_index/style-noscript.css" />
+		</noscript>
+        <script language="JavaScript"> 
+            function mueveReloj(){ 
+                momentoActual = new Date() 
+                hora = momentoActual.getHours() 
+                minuto = momentoActual.getMinutes() 
+                segundo = momentoActual.getSeconds()
+
+                horaImprimible = hora + " : " + minuto + " : " + segundo
+                document.form_reloj.reloj.value = horaImprimible 
+                setTimeout(mueveReloj,1000)
+            }
+        </script> 
+        
+<style>
+
+form input[type="text"]:focus, form input[type="email"]:focus, form input[type="password"]:focus, form select:focus, form textarea:focus {
+    background: #009F3C;
+}
+p, ul, ol, dl, table, blockquote, form {
+    margin-bottom: -7em;
+}
+form input[type="text"], form input[type="email"], form input[type="password"], form select, form textarea {
+    
+    background: #009F3C;
+    padding: 0.75em;
+    width: 100%;
+    font-size: xx-large;
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+    -o-transition: background-color .25s ease-in-out;
+    -ms-transition: background-color .25s ease-in-out;
+    transition: background-color .25s ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+
+#wrapper {
+    background-image: url('img_index/Approved.png'); 
+    background-color: #009F3C;
+    
+}
+.panel {
+  display: none;
+  } 
+  form input[type="text"]{
+    
+    padding: 0.75em;
+    width: 100%;
+    font-size: xx-large;
+    
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+    -o-transition: background-color .25s ease-in-out;
+    -ms-transition: background-color .25s ease-in-out;
+    transition: background-color .25s ease-in-out;
+}
+
+   input[type="submit"], .button {
+    display: flex;
+    width: 99%;
+    padding: 0.75em 0 0.75em 0;
+    text-align: center;
+    place-content: center;
+    font-size: 15pt;
+    text-align: -webkit-match-parent;
+    mix-blend-mode: multiply;
+    background-clip: content-box;
+   /*  border: solid; */
+   transition: background-color .25s ease-in-out;
+}
+/* 
+element.style {
+    text-align: center;
+    width: 100%;
+} */
+#footer{
+display:none;
+}
+#main {
+    position: fixed;
+    overflow: auto;
+    
+}
+body, input, textarea, select {
+    font-size: 18pt;
+    line-height: 2.75em;
+    display:unset;
+    text-align: center;
+    color: #000000;
+    
+    
+    
+}
+b {
+    display: none;}
+input #centro{
+    text-align: center;
+    color: #d9d5d9;
+  font-size: 27px;
+  padding: 10px;
+  text-decoration: none;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  text-shadow: 0px 1px 3px #615361;
+  border: solid #000000 1px;
+  background: #454145;
+}
+
+div #sarediv{
+    width:50%;
+    text-align: center;
+    font-family: Georgia;
+
+}
+div {
+    padding: 27px;
+    margin:1%
+}
+/* input {
+    width: 103%;
+}
+ 
+.resultado {
+    display: none;
+  } 
+.saredi{
+    display: none; */
+  } 
+
+/* 
+@media (max-width: 480px) {
+    .resultado {
+    display: none;
+  } 
+.panel {
+  display: none;
+  } 
+  b {
+    display: none;
+}
+input {
+    width: 103%;
+}
+ 
+}
+@media screen and (max-width: 480px) {
+.post-author {
+   display: none;
+  }
+} */
+</style>
+<!-- CSS media query dentro de una hoja de estilos -->
+
+        
+</head>
+<body style="background:#009F3C" onload="mueveReloj()">
+    <!-- Wrapper-->
+    <div id="wrapper">
+        
+        <!-- Nav -->
+        <nav id="nav">
+            <div id='ingresohora' ></div>
+
+            <div id='' ></div>
+            <div style="background: #009F3C;"  id='equipo' ><form style="background: #009F3C;" name="form_reloj"> 
+                <input type="text" style="color:rgb(0, 0, 0);"  name="reloj" size="10"> 
+            </form> </div>
+
+            <div id='saredi'>
+                <b>Nº Empleado : </b><form style="" method="POST" action="success.php"  onSubmit="return validarForm(this)"> 
+ 
+                    <input style="" placeholder="Ingresa DNI" maxlength="9" name="palabra" id="centro" >
+                    
+                    <input type="submit" value="Entrada" name="boton" class="centro">
+                    
+                    <input type="submit" value="Salida" name="salida" class="centro">
+                    <br>
+                </form>
+                 
+                <script type="text/javascript">
+                    function validarForm(formulario) 
+                    {
+                        if(formulario.palabra.value.length==10) 
+                        { //¿Tiene 0 caracteres?
+                            formulario.palabra.focus();  // Damos el foco al control
+                            alert('Dato incorrecto'); //Mostramos el mensaje
+                            return false; 
+                         } //devolvemos el foco  
+                         return true; //Si ha llegado hasta aquí, es que todo es correcto 
+                     }   
+                </script>
+            </div>
+           
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <!-- Me -->
+            <article id="me" class="panel">
+                <header  id='resultado' >
+                </header>
+                <a href="http://198.27.86.147:90/" class="jumplink pic">
+                    
+
+                    <img id='my_image' src="img_index/user.png" alt="" style="widht:28%;"/>
+                </a>
+            </article>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <ul class="copyright">
+                <li></li><li>Design: <a href="http://mdybpo.com/">&copy; MDY BPO.</a></li>
+            </ul>
+        </div>
+
+    </div>
+<!--    ▄───▄
+        █▀█▀█
+        █▄█▄█
+        ─███──▄▄
+        ─████▐█─█
+        ─████───█
+        ─▀▀▀▀▀▀▀
+     -->
+
+</body>
+</html>
+

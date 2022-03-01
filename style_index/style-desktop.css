@@ -1,0 +1,473 @@
+/*
+	Astral by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+html
+{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+body
+{   
+    /* background:#DF0024; */
+    width: 100%;
+    min-width: 1000px;
+    min-height: 100%;
+    overflow-y: scroll;
+    background-attachment: fixed;
+    margin-top: 25px !important;
+}
+
+body,input,textarea,select
+{
+    font-size: 14pt;
+    line-height: 1.75em;
+}
+
+h1
+{
+    font-size: 2.4em;
+    letter-spacing: -0.015em;
+}
+
+h2
+{
+    font-size: 1.8em;
+    letter-spacing: -0.015em;
+}
+
+h3, h4, h5, h6
+{
+    font-size: 1.25em;
+    letter-spacing: -0.015em;
+}
+
+/* Section/Article */	
+
+    header
+    {
+        margin: 0 0 1.5em 0;
+    }
+
+        header > p
+        {
+            margin: 0.5em 0 0 0;
+        }
+
+/* Button */
+
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    .button
+    {
+        padding: 0.7em 1.5em 0.7em 1.5em;
+    }
+
+        input[type="button"].small,
+        input[type="submit"].small,
+        input[type="reset"].small,
+        .button.small
+        {
+            font-size: 0.75em;
+        }
+        
+        input[type="button"].big,
+        input[type="submit"].big,
+        input[type="reset"].big,
+        .button.big
+        {
+            font-size: 1.25em;
+            padding: 0.5em 1.25em 0.5em 1.25em;
+        }
+        
+        input[type="button"].huge,
+        input[type="submit"].huge,
+        input[type="reset"].huge,
+        .button.huge
+        {
+            font-size: 1.5em;
+            padding: 0.5em 1.25em 0.5em 1.25em;
+        }
+
+/*********************************************************************************/
+/* Wrapper                                                                       */
+/*********************************************************************************/
+        
+#wrapper
+{
+    width: 45em;
+    margin: 0 auto;
+    opacity: 0.00001;
+}
+
+    #wrapper.tall
+    {
+        padding-bottom: 6em;
+    }
+
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+
+#nav
+{
+    text-align: center;
+    height: 7.25em;
+    cursor: default;
+}
+
+    #nav a
+    {
+        font-size: 2.5em;
+        margin: 0 0.25em 0 0.25em;
+        opacity: 0.35;
+        outline: 0;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+        -o-transition: opacity .25s ease-in-out;
+        -ms-transition: opacity .25s ease-in-out;
+        transition: opacity .25s ease-in-out;
+    }
+
+        #nav a:before
+        {
+            font-size: 0.8em;
+        }
+
+        #nav a:after
+        {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: -0.75em;
+            margin-left: -0.5em;
+            border-bottom: solid 0em #ffffff;
+            border-left: solid 0.5em transparent;
+            border-right: solid 0.5em transparent;
+            -moz-transition: border-bottom-width .25s ease-in-out;
+            -webkit-transition: border-bottom-width .25s ease-in-out;
+            -o-transition: border-bottom-width .25s ease-in-out;
+            -ms-transition: border-bottom-width .25s ease-in-out;
+            transition: border-bottom-width .25s ease-in-out;
+        }
+    
+        #nav a span
+        {
+            display: block;
+            position: absolute;
+            background: #222222;
+            color: #ffffff;
+            top: -2.75em;
+            font-size: 0.3em;
+            height: 2.25em;
+            line-height: 2.25em;
+            left: 50%;
+            opacity: 0;
+            -moz-transition: opacity .25s ease-in-out;
+            -webkit-transition: opacity .25s ease-in-out;
+            -o-transition: opacity .25s ease-in-out;
+            -ms-transition: opacity .25s ease-in-out;
+            transition: opacity .25s ease-in-out;
+            
+            /* Labels not wide enough? Increase its width below and set margin-left to ((width / 2) * -1) */
+            width: 5.5em;
+            margin-left: -2.75em;
+        }
+        
+            #nav a span:after
+            {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -0.4em;
+                left: 50%;
+                margin-left: -0.6em;
+                border-top: solid 0.6em #222222;
+                border-left: solid 0.6em transparent;
+                border-right: solid 0.6em transparent;
+            }
+
+        #nav a:hover
+        {
+            opacity: 1.0;
+        }
+
+            #nav a:hover span
+            {
+                opacity: 1.0;
+            }	
+        
+        #nav a.active
+        {
+            opacity: 1.0;
+        }
+
+            #nav a.active:after
+            {
+                border-bottom-width: 0.5em;
+            }
+        
+/*********************************************************************************/
+/* Panels                                                                        */
+/*********************************************************************************/
+
+#main
+{
+    width: 45em;
+    background: #ffffff;
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.25);
+}
+
+.panel
+{
+    padding: 3.5em 2.5em 3.5em 2.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45em;
+}
+
+/* Me */
+
+    #me
+    {
+        padding: 0;
+        height: 20em;
+    }
+    
+        #me .pic
+        {
+            display: block;
+            position: absolute;
+            right: -1px;
+            top: 0;
+            height: 100%;
+            text-decoration: none;
+        }
+        
+            #me .pic img
+            {
+                 
+                    position: relative;
+                    display: block;
+                    height: 100%;
+                    max-width: 470px;
+                    clip: rect(200px, 200px, 200px, 200px);	
+                 /*
+                    clip: rect(30px 165px 100px 30px); 
+                    z-index: 2147483647;
+                 max-width: 400px;
+                margin: -55px 0 -22px -322px;*/
+            }
+        
+            #me .pic .arrow
+            {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                margin-top: -1.375em;
+                width: 2.75em;
+                height: 2.75em;
+                background: transparent;
+                background: transparent;
+                color: transparent;
+                text-align: center;
+                line-height: 2.75em;
+                font-size: 1.5em;
+                z-index: 1;
+                -moz-transition: width .15s ease-in-out, padding-right .15s ease-in-out;
+                -webkit-transition: width .15s ease-in-out, padding-right .15s ease-in-out;
+                -o-transition: width .15s ease-in-out, padding-right .15s ease-in-out;
+                -ms-transition: width .15s ease-in-out, padding-right .15s ease-in-out;
+                transition: width .15s ease-in-out, padding-right .15s ease-in-out;
+            }
+
+                #me .pic .arrow:before
+                {
+                    position: relative;
+                    display: none;
+                    padding-right: 0;
+                    top: 0.125em;
+                }
+        
+                #me .pic .arrow span
+                {
+                    display: none;
+                    text-indent: -9999px;
+                }
+            
+                #me .pic:hover .arrow
+                {
+                    width: 3em;
+                    display: none;
+                    padding-right: 0.25em;
+                }
+        
+        #me header
+        {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            margin-left: .5em;
+        }
+        
+            #me header > h1
+            {
+                position: absolute;
+                left: 0;
+                top: 10%;
+                margin: 0;
+            }
+        
+            #me header > p 
+            {
+                position: absolute;
+                left: 0;
+                top: 30%;
+                font-size: 1.5em;
+                letter-spacing: -0.015em;
+                margin-top: 0;
+            }
+
+            #inactivo
+            {
+                position: absolute;
+                left: 0;
+                bottom: 0%;
+                margin: 0;
+                width: 100%;
+                color: #DF0024;
+                /*color: #ffffff;*/
+                font-size: 100px;
+                padding-top: 30px;
+                padding-left: 10%; 
+                height: 100px;
+                background-image: url('../warning/Denied.png'); 
+                background-size: 100px;
+                /*background-color: #DF0024;	*/
+                background-repeat: no-repeat;
+            }
+
+            #activo
+            {
+                position: absolute;
+                left: 0;
+                bottom: 0%;
+                margin: 0;
+                width: 100%;
+                color: #009F3C;
+                /*color: #ffffff;*/
+                font-size: 100px;
+                padding-top: 30px;
+                padding-left: 10%; 
+                height: 100px;
+                background-image: url('../warning/Approved.png'); 
+                background-size: 100px;
+                /*background-color: #DF0024;	*/
+                background-repeat: no-repeat;
+            }
+            #saredi
+            {
+                left: 0;
+                top: 2%;
+                margin: 0;
+                width: 100%;
+                color: #DF0024;
+                display:flex;
+                font-size: 40px;
+                text-align: left; 
+                padding-top: 30px;
+                padding-left: 10%; 
+                height: 100px;
+                background-image: url('img_index/search.png'); 
+                background-size: 100px;
+            
+                background-repeat: no-repeat;   
+            }
+
+            #sarediv
+            {
+                position: flex;
+                left: 0;
+                top: 2%;
+                margin: 0;
+                width: 100%;
+                color: #DF0024;
+                /*color: #ffffff;*/
+                font-size: 40px;
+                text-align: left;
+                padding-top: 30px;
+                padding-left: 10%;
+                height: 100px;
+                /**/
+                background-image: url('../images/search.png');
+                background-size: 100px;
+                /*background-color: #DF0024;	*/
+                background-repeat: no-repeat;
+            }
+            #equipo {
+                position: absolute;
+                left: 87%;
+                top: 5%;
+                margin: 0;
+                /* border: red 1px solid; */
+                width: 120px;
+                color: #CCCCCC;
+                /* color: #ffffff; */
+                font-size: 30px;
+                text-align: left;
+                height: 50px;
+            }
+
+            #ingresohora
+            {
+                position: absolute; 
+                left: 87%;
+                top: 5%;
+                margin: 0;
+                /*border: red 1px solid;*/
+                width: 120px;
+                color: #CCCCCC;
+                /*color: #ffffff;*/
+                font-size: 19px;
+                text-align: left; 
+                height: 50px;
+            }
+
+
+            #ingresoip
+            {
+                position: absolute; 
+                left: 60%;
+                top: 10%;
+                margin: 0;
+                /*border: red 1px solid;*/
+                width: 220px;
+                color: #CCCCCC;
+                /*color: #ffffff;*/
+                font-size: 30px;
+                text-align: left; 
+                height: 50px;
+            }
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+#footer
+{
+    text-align: center;
+    padding: 2em 0 0 0;
+    font-size: 0.75em;
+}
