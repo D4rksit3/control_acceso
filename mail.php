@@ -26,8 +26,8 @@ else
 //tabla mantenimiento  -> jalar data de campañas,agregar puesto, etc
 //carga masiva
 //fecha de ingreso -> cambiar fecha en registro / realizado
-//candado para no duplicar la entrada, y si no haz marcado entrada
+//candado para no duplicar la entrada, y si no haz marcado entrada / realizado
 //enviar correo a DNI no existente / realizado
-//agregar ip a registro de reportes ->agregar variables a las ip y verificar si es en sede 
-//inactivos no registran 
-//rango de horarios para marcacion 
+//agregar ip a registro de reportes ->agregar variables a las ip y verificar si es en sede / realizado
+//inactivos no registran / realizado
+//rango de horarios para descargar reportes de marcacion 

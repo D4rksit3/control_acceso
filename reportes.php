@@ -24,8 +24,8 @@
     $objeto = new Conexion();
     $conexion = $objeto->Conectar();
     
-    $sql = " SELECT reportes_id, nombres, puesto, estado, dni, centro, inicio, fin FROM reportes ";
-    $sql .= " ORDER BY reportes_id ";
+    $sql = " SELECT reportes_id, nombres, puesto, estado, dni, centro, ip, inicio, fin FROM reportes";
+    $sql .= " ORDER BY reportes_id DESC "; 
     $resultado = $conexion->prepare($sql);
     $resultado->execute();
     $reportes=$resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -48,6 +48,7 @@
                                 <th>Estado</th>                               
                                 <th>Documento</th>
                                 <th>Centro</th>
+                                <th>IP</th>
                                 <th>inicio</th>
                                 <th>fin</th>
 
@@ -69,6 +70,7 @@
                                <td><?php echo $reportes['estado'];?></td>
                                <td><?php echo $reportes['dni'];?></td>
                                <td><?php echo $reportes['centro'];?></td>
+                               <td><?php echo $reportes['ip'];?></td>
                                <td><?php echo $reportes['inicio'];?></td>
                                <td><?php echo $reportes['fin'];?></td>
                                

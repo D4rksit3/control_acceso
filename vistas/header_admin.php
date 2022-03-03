@@ -160,6 +160,22 @@ $row = $resultado->fetch_assoc();
                 </div>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Configuracion</span>
+                </a>
+                <div id="collapse" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="mtto.php">Mantenimiento</a>
+                    </div>
+                </div>
+            </li>
+
+
+
             <!-- Nav Item - Charts
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">

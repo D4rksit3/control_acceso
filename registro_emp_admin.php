@@ -13,7 +13,10 @@
                     <div class="text-center">
                         <h1 class="h4 text-gray-900 mb-4">Registrar Empleado</h1>
                     </div>
+                    <a href="masivo.php" class="btn btn-primary"> Cargar Masivo</a>
+                    <br>
                     <form role="form" id="guardar-registro" name="guardar-registro" method="post" action="ediciones_registro.php" class="user">
+
 
 					    <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
