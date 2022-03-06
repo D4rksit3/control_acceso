@@ -13,37 +13,23 @@
 
         <!-- Interactuar excel con php/mysql-->
 
-            <form action="validar_excel.php" method="POST" name="frmExcelImport" id="frmExcelImport" enctype="multipart/form-data">    
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Subir Archivo</span>
-                    </div>
-                    <div class="custom-file">
-                        <input type="file" name="file" id="file" class="custom-file-input" id="inputGroupFile01" >
-                        <label class="custom-file-label" for="inputGroupFile01">Seleccionar Archivo</label>
-                        
-                    </div>
-                    
+            <form action="recibe_excel_validando.php" method="POST" enctype="multipart/form-data">    
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Seleccionar Archivo (Solo .csv)</label>
+                    <input type="file" name="dataCliente" id="file-input"  class="form-control-file" >
+    
                 </div>
-                <button type="submit" id="submit" name="import"
-                class="btn btn-success">Import</button>
-                <br>
+                    <input type="submit" name="subir" class="btn btn-success" value="Subir Excel"/>
+                    
+                    <br>
             </form>
+
+            <?php
+          
+            ?>
+       
             
-        <div class="exitoso">
-        <br>
-            <div class="alert alert-success" role="alert">
-                
-            Se importo correctamente!
-            </div>    
-        </div>
-
-        <div class="F">
-            <div class="alert alert-danger" role="alert">
-            Error de importacion!
-            </div>
-
-        </div>
+       
 
 
     </div>

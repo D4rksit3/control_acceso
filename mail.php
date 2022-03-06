@@ -24,7 +24,7 @@ else
   echo 'Error en el envío del email';
 
 //tabla mantenimiento  -> jalar data de campañas,agregar puesto, etc
-//carga masiva
+//carga masiva / realizar datos
 //fecha de ingreso -> cambiar fecha en registro / realizado
 //candado para no duplicar la entrada, y si no haz marcado entrada / realizado
 //enviar correo a DNI no existente / realizado

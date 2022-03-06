@@ -40,6 +40,8 @@
     $resultadoCamp ->execute();
     $campaña = $resultadoCamp->fetchAll(PDO::FETCH_ASSOC);
 
+    //borrar razon social
+
 
 
 
@@ -69,7 +71,8 @@
 
         <h2>Razon Social</h2>
 
-        <button type="button" class="btn btn-dark">Agregar Razon Social</button>
+        <a href="agr_rsocial.php" class="btn btn-dark">Agregar Razon Social</a>
+        
           
         <div class="table-responsive">
         <table class="table table-striped table-hover">
@@ -87,12 +90,13 @@
         <tr>
           <td><?php echo $reportes['razon_id'] ?></td>
           <td><?php echo $reportes['razon_social'] ?></td>
-          
-          <?php } ?>      
           <td>
-          <a href="edit_mtto.php?id=<?php echo $reportes['razon_id']; ?>" class="btn btn-warning btn-circle btn-sm" ><i class="">Editar</i></a>
+          <a href="edit_rsocial.php?id=<?php echo $reportes['razon_id']; ?>" class="btn btn-warning btn-circle btn-sm" ><i class="">Editar</i></a>
           <a href="#" data-id="<?php echo $reportes['razon_id']; ?>" data-tipo="registro" class="btn btn-danger btn-circle btn-sm borrar_registro" ><i class="fas fa-trash"></i></a>
         </td>
+          <?php 
+        } ?>      
+          
 
         </tr>
         
@@ -118,8 +122,8 @@
           
           <div class="container" style="">
           <h2>Puesto</h2>
-
-          <button type="button" class="btn btn-dark">Agregar Puesto</button>
+          <a href="agr_puesto.php" class="btn btn-dark">Agregar Puesto</a>
+         
           <div class="table-responsive">
         <table class="table table-striped table-hover">
         <tr>
@@ -136,40 +140,27 @@
         <tr>
           <td><?php echo $puesto['puesto_id'] ?></td>
           <td><?php echo $puesto['puesto'] ?></td>
-          
-          <?php } ?>      
           <td>
-          <a href="edit_mtto.php?id=<?php echo $puesto['puesto_id']; ?>" class="btn btn-warning btn-circle btn-sm" ><i class="">Editar</i></a>
+          <a href="edit_puesto.php?id=<?php echo $puesto['puesto_id']; ?>" class="btn btn-warning btn-circle btn-sm" ><i class="">Editar</i></a>
           <a href="#" data-id="<?php echo $puesto['puesto_id']; ?>" data-tipo="registro" class="btn btn-danger btn-circle btn-sm borrar_registro" ><i class="fas fa-trash"></i></a>
         </td>
+          <?php } ?>      
+         
 
         </tr>
         
 
 </table>
 </div>
-
-
-
-
-
-
-
-
         </div>
-
-
-
-
-
   </div>
   <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
       
                 <div class="container" style="">
                 <h2>Campaña</h2>
+                <a href="agr_campaña.php" class="btn btn-dark">Agregar Campaña</a>
 
-
-                <button type="button" class="btn btn-dark">Agregar Puesto</button>
+                
           <div class="table-responsive">
         <table class="table table-striped table-hover">
         <tr>
@@ -186,12 +177,12 @@
         <tr>
           <td><?php echo $campaña['campaña_id'] ?></td>
           <td><?php echo $campaña['campaña'] ?></td>
-          
-          <?php } ?>      
           <td>
-          <a href="edit_mtto.php?id=<?php echo $campaña['campaña_id']; ?>" class="btn btn-warning btn-circle btn-sm" ><i class="">Editar</i></a>
+          <a href="edit_campaña.php?id=<?php echo $campaña['campaña_id']; ?>" class="btn btn-warning btn-circle btn-sm" ><i class="">Editar</i></a>
           <a href="#" data-id="<?php echo $campaña['campaña_id']; ?>" data-tipo="registro" class="btn btn-danger btn-circle btn-sm borrar_registro" ><i class="fas fa-trash"></i></a>
         </td>
+          <?php } ?>      
+          
 
         </tr>
         

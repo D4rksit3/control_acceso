@@ -140,9 +140,11 @@ $row = $resultado->fetch_assoc();
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="reportes.php">PERU</a>
+                        <a class="collapse-item" href="reportes.php">HISTORICO</a>
+                        <a class="collapse-item" href="down_reporte.php">POR FECHA</a>
                     </div>
                 </div>
+                
             </li>
 
             <li class="nav-item">

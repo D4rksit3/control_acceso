@@ -35,12 +35,16 @@
 <h1 class="text-center font-black">Reporte Marcaciones PERU</h1>
     <!--DataTables-->
     <div class="col-lg-12">
+                        
         <div class="row">
+        
             <div class="col-lg-12">
                 <div class="table-responsive">        
+                
                     <table id="example" class="table table-striped table-bordered font-black" cellspacing="0" width="100%">
+                    
                         <thead>
-
+                        
                             <tr>
                                 <th>ID</th>
                                 <th>Nombres</th>
