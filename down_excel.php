@@ -32,6 +32,8 @@ if(isset($_POST['generar_reporte'])){
 
 <?php
      //Query para crear el reporte
+
+
      $reporteCsv = "SELECT * FROM reportes WHERE fecha>='$fecha1' AND fecha<='$fecha2'";/*  */
      $resultado = mysqli_query($conexion, $reporteCsv);
      while ($row = mysqli_fetch_array($resultado)) {

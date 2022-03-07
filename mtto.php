@@ -77,7 +77,7 @@
         <div class="table-responsive">
         <table class="table table-striped table-hover">
         <tr>
-          <th>ID</th>
+         
           <th>Razon Social</th>
           <th>Editar</th>
         </tr>
@@ -88,12 +88,14 @@
        
 
         <tr>
-          <td><?php echo $reportes['razon_id'] ?></td>
+          
           <td><?php echo $reportes['razon_social'] ?></td>
           <td>
-          <a href="edit_rsocial.php?id=<?php echo $reportes['razon_id']; ?>" class="btn btn-warning btn-circle btn-sm" ><i class="">Editar</i></a>
-          <a href="#" data-id="<?php echo $reportes['razon_id']; ?>" data-tipo="registro" class="btn btn-danger btn-circle btn-sm borrar_registro" ><i class="fas fa-trash"></i></a>
+          <a href="edit_rsocial.php?id=<?php echo $reportes['razon_id']; ?>" class="btn btn-warning" ><i class="">Editar</i></a>
+          <a href="del_rs.php?id=<?php echo $reportes['razon_id']; ?>" class="btn btn-danger"><i class="fas fa-trash"></i></a>
         </td>
+
+        
           <?php 
         } ?>      
           
@@ -127,7 +129,7 @@
           <div class="table-responsive">
         <table class="table table-striped table-hover">
         <tr>
-          <th>ID</th>
+          
           <th>Puesto</th>
           <th>Editar</th>
         </tr>
@@ -138,11 +140,11 @@
        
 
         <tr>
-          <td><?php echo $puesto['puesto_id'] ?></td>
+          
           <td><?php echo $puesto['puesto'] ?></td>
           <td>
-          <a href="edit_puesto.php?id=<?php echo $puesto['puesto_id']; ?>" class="btn btn-warning btn-circle btn-sm" ><i class="">Editar</i></a>
-          <a href="#" data-id="<?php echo $puesto['puesto_id']; ?>" data-tipo="registro" class="btn btn-danger btn-circle btn-sm borrar_registro" ><i class="fas fa-trash"></i></a>
+          <a href="edit_puesto.php?id=<?php echo $puesto['puesto_id']; ?>" class="btn btn-warning" ><i data-toggle="modal" data-target="#exampleModal">Editar</i></a>
+          <a href="del_puesto.php?id=<?php echo $puesto['puesto_id']; ?>" class="btn btn-danger" ><i class="fas fa-trash"></i></a>
         </td>
           <?php } ?>      
          
@@ -154,6 +156,26 @@
 </div>
         </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
       
                 <div class="container" style="">
@@ -164,7 +186,7 @@
           <div class="table-responsive">
         <table class="table table-striped table-hover">
         <tr>
-          <th>ID</th>
+          
           <th>Campaña</th>
           <th>Editar</th>
         </tr>
@@ -175,11 +197,11 @@
        
 
         <tr>
-          <td><?php echo $campaña['campaña_id'] ?></td>
+          
           <td><?php echo $campaña['campaña'] ?></td>
           <td>
-          <a href="edit_campaña.php?id=<?php echo $campaña['campaña_id']; ?>" class="btn btn-warning btn-circle btn-sm" ><i class="">Editar</i></a>
-          <a href="#" data-id="<?php echo $campaña['campaña_id']; ?>" data-tipo="registro" class="btn btn-danger btn-circle btn-sm borrar_registro" ><i class="fas fa-trash"></i></a>
+          <a href="edit_campaña.php?id=<?php echo $campaña['campaña_id']; ?>" class="btn btn-warning" ><i class="">Editar</i></a>
+          <a href="del_campaña.php?id=<?php echo $campaña['campaña_id']; ?>"  data-tipo="registro" class="btn btn-danger" ><i class="fas fa-trash"></i></a>
         </td>
           <?php } ?>      
           

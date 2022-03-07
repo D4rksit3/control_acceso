@@ -48,7 +48,7 @@ foreach ($lineas as $linea) {
              <table class="table table-sm table-dark">
                 <tr class="bg-success" >
                 
-                    <td class="bg-success"><?php echo $result_update = "Usuario Agregado ".$nombres.' '.$apellidos_ma.' '.$apellidos_pa.' con DNI: '.$dni;  ?></td>
+                    <td class="bg-success"><?php echo $result_update = "Usuario Agregado ".$nombres.' '.$apellidos_pa.' '.$apellidos_ma.' con DNI: '.$dni;  ?></td>
                 
                 </tr>
             </table>
@@ -66,7 +66,7 @@ else{
     <table class="table table-sm table-dark">
     <tr class="bg-success" >
        
-       <td class="bg-danger"><?php echo $result_update = "Usuario ya registrado ".$nombres.' '.$apellidos_ma.' '.$apellidos_pa.' con DNI: '.$dni;  ?></td>
+       <td class="bg-danger"><?php echo $result_update = "Usuario ya registrado ".$nombres.' '.$apellidos_pa.' '.$apellidos_ma.' con DNI: '.$dni;  ?></td>
       
    </tr>
    </table>
