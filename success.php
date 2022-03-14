@@ -61,16 +61,15 @@ if($btn_salida){
 				$consulta_mysql= "SELECT * FROM empleados WHERE dni='$dni';";
        
        			$ip_add = $_SERVER['REMOTE_ADDR'];
-				$update = "UPDATE reportes SET fin='$hora' WHERE dni='$dni' and fin='fin';";
-				$resultado =mysqli_query($conexion,$update);
-				if ($resultado == $resultado){
-					
-					mysqli_query($conexion,$resultado);
+				
 
-				};	
+				$salida = "SELECT fin FROM reportes WHERE dni='$dni' and fin='fin'";
+				$sal = mysqli_query($conexion,$salida);
+				$res = mysqli_num_rows($sal);
+
 				$result = mysqli_query($conexion,$consulta_mysql);
-				while($registro = mysqli_fetch_array($result)) 
-				{
+				while($registro = mysqli_fetch_array($result)){
+
 					$nombre = $registro['nombres'];
         			$apellido = $registro['apellido_pa']." ".$registro['apellido_ma'];
 					$dato_completo = $nombre." ".$apellido;
@@ -87,7 +86,15 @@ if($btn_salida){
 						$status = "Inactivo";
 						$color = "rojo";
 					};
-					if ($color == 'verde'){
+					if ($res == '1'){
+						$update = "UPDATE reportes SET fin='$hora' WHERE dni='$dni' and fin='fin';";
+						$resultado =mysqli_query($conexion,$update);
+						if ($resultado == $resultado){
+							
+						mysqli_query($conexion,$resultado);
+
+						};	
+
 						?>
 						<head>
 							<title>Control Acceso MDY PR</title>
@@ -149,8 +156,8 @@ if($btn_salida){
 						}
 						</style>
 						</head>
-						<body style="background:#009F3C">
-							<div id="wrapper" onLoad="redireccionar()">
+						<body style="background:#009F3C" onLoad="redireccionar()">
+							<div id="wrapper" >
 									
 									<!-- Nav -->
 									<nav id="nav">
@@ -209,6 +216,72 @@ if($btn_salida){
 												
 
 						<?php
+					} elseif($res != '1'){
+
+						echo $res;
+						?>
+						</head>
+						<style>
+							
+							.noexiste {
+								display: none;
+								visibility:hidden
+							} 
+													
+							strong, b {
+								font-weight: 50;
+								color: #484848;
+							}
+							h2 {
+								font-size: 1.6em;
+								letter-spacing: -0.015em;
+							}
+							
+							#acti {
+							position: absolute;
+							left: 0;
+							bottom: 0%;
+							margin: 0;
+							width: 100%;
+							color: #009F3C;
+							/* color: #ffffff; */
+							font-size: 90px;
+							padding-top: 30px;
+							padding-left: 19%;
+							height: 88px;
+							background-image: url(img_index/Approved.png);
+							background-size: 88px;
+							/* background-color: #DF0024; */
+							background-repeat: no-repeat;
+						}
+
+						@media screen and (max-width: 1000px) {
+							.panel{
+								margin: -26px 0px 0px -42px;
+							}
+						}
+						</style>
+						<script>
+								function redireccionar() {
+								setTimeout("location.href='http://198.27.86.147:90'", 5000);
+							}
+							</script>
+							</head>
+						<body style="background:#009F3C" onLoad="redireccionar()">
+
+<div style="text-align:center;mix-blend-mode: color-burn;padding:26px" class="noactivo" >
+	<div class="alert alert-danger" role="alert">
+		<h1>Ya registraste tu salida</h1>
+
+		
+
+		<a href='http://198.27.86.147:90'></a>
+		<a class="btn btn-warning" href='http://198.27.86.147:90'>Regresar</a> 
+	</div>
+</div>
+</body>			
+						<?
+					
 					}else{
 						?>
 						
@@ -223,6 +296,11 @@ if($btn_salida){
 							<noscript>
 							<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 							</noscript>
+							<script>
+								function redireccionar() {
+								setTimeout("location.href='http://198.27.86.147:90'", 5000);
+							}
+							</script>
 							<style>
 							.noexiste {
 								display: none;
@@ -239,7 +317,7 @@ if($btn_salida){
 
 							</style>
 							</head>
-							<body style="background-blend-mode: color-burn;">
+							<body style="background-blend-mode: color-burn;" onLoad="redireccionar()">
 
 								<div style="text-align:center;" class="noactivo" >
 									<div class="alert alert-danger" role="alert">
@@ -478,6 +556,7 @@ if($boton){
 										<link rel="stylesheet" href="style_index/skel.css" />
 										<link rel="stylesheet" href="style_index/style.css" />
 										<link rel="stylesheet" href="style_index/style-desktop.css" />
+										
 										<!-- <link rel="stylesheet" href="http://158.69.241.104:90/Acceso/content/css/style-noscript.css" /> -->
 									</noscript>
 									<style>
@@ -517,11 +596,15 @@ if($boton){
 
 
 							</style>
+							<script>
+								function redireccionar() {
+								setTimeout("location.href='http://198.27.86.147:90'", 5000);
+							}
+							</script>
 								</head>
 								
 									
-								<body style="background:#009F3C">
-
+								<body style="background:#009F3C" onLoad="redireccionar()">
 
 									<div style="text-align:center;mix-blend-mode: color-burn;padding:26px" class="noactivo" >
 										<div class="alert alert-danger" role="alert">

@@ -12,10 +12,10 @@
         <h1> Carga Masiva </h1>
 
         <!-- Interactuar excel con php/mysql-->
-
+<a href="dataEmpleados.csv">Descargar Formato</a>
             <form action="recibe_excel_validando.php" method="POST" enctype="multipart/form-data">    
                 <div class="form-group">
-                    <label for="exampleFormControlFile1">Seleccionar Archivo (Solo .csv)</label>
+                    <label for="exampleFormControlFile1">Se requiere llenar el formato correctamente para realizar las creaciones sin errores.</label>
                     <input type="file" name="dataCliente" id="file-input"  class="form-control-file" >
     
                 </div>

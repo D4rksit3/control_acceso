@@ -164,9 +164,10 @@ while ($fila = mysqli_fetch_array($consulta_social)) {
                                 
 								<select class="form-control" id="modalidad" name="modalidad" required>
 									<option value = ""></option>
-									<option value = "No notificado">No notificado</option>
+									
 									<option value = "PRESENCIAL">PRESENCIAL</option>
 									<option value = "REMOTO">REMOTO</option>
+                                    <option value = "MIXTO">MIXTO</option>
 								</select>
 
                            </div>
